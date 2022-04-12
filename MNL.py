@@ -430,7 +430,7 @@ def jkknife(A):
     err = ((n-1)/n)*sum
     return yibar,err
 #Defining Chebyshev function
-def chebyshev(x: float, order: int) -> float:
+def chebyshev(x, order):
     if order == 0:
         return 1
     elif order == 1:
@@ -441,7 +441,7 @@ def chebyshev(x: float, order: int) -> float:
         return 32*x**3 - 48*x**2 + 18*x - 1
 
 #Defining the function for chebyshev fit
-def fitw_cheby(xvals: np.array, yvals: np.array, degree: int):
+def fitw_cheby(xvals, yvals, degree):
     n = len(xvals)
     para = degree + 1
     A = np.zeros((para, para))
@@ -464,9 +464,9 @@ def fitw_cheby(xvals: np.array, yvals: np.array, degree: int):
 
     para = lu_decomp(A, b)
     return para,A
-# Function for Pseudo random number generator
-def mu_li_co_ge(seed: float, a: float, m: float, num: int) -> list:
-    x = seed
+#------------------Pseudo random number generator
+def mu_li_co_ge(s, a, m, num):
+    x = s
     rands = []
     for i in range(num):
         x = (a*x) % m
