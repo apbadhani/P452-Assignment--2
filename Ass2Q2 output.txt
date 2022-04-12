@@ -1,0 +1,10 @@
+pi value using MC integration for case a) :  3.1418612999141753
+pi value using MC integration for case b) :  3.146374021142365
+pi value by throwing points for case a) : 3.1472
+pi value by throwing points for case b) : 3.1408
+
+#########
+Seed choice depends on the type of estimation you are doing. For our estimation
+of pi value by throwing points, the higher values of a,m is suggested as for them
+the accuracy was better than lower values. For MC integration that it led to
+decreased accuracy.
